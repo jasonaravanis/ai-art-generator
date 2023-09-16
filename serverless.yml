@@ -4,6 +4,14 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: ssm:GetParameter
+          Resource:
+          - "arn:aws:ssm:${aws:region}:${aws:accountId}:parameter/open-ai-secret-key"
+
 
 functions:
   getImage:
