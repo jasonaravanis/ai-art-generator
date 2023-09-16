@@ -6,8 +6,8 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  api:
-    handler: index.handler
+  getImage:
+    handler: index.getImage
     events:
       - httpApi:
           path: /
