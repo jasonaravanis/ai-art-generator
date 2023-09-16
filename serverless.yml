@@ -7,7 +7,7 @@ provider:
 
 functions:
   getImage:
-    handler: index.getImage
+    handler: src/index.getImage
     events:
       - httpApi:
           path: /
