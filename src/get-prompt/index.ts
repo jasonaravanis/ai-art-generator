@@ -1,6 +1,6 @@
-const getPrompt = async () => {
+const getPrompt = async (): Promise<Response> => {
     const response = await fetch('http://date.jsontest.com/')
-    return response;
+    return response
 }
 
 export default getPrompt
