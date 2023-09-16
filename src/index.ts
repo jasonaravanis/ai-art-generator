@@ -2,7 +2,7 @@ import { type APIGatewayProxyEventV2, type APIGatewayProxyResultV2 } from 'aws-l
 import getPrompt from './get-prompt'
 
 const getImage = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
-  const prompt = getPrompt()
+  const prompt = await getPrompt()
 
   return {
     statusCode: 200,
