@@ -12,3 +12,5 @@ functions:
       - httpApi:
           path: /
           method: get
+plugins:
+  - serverless-plugin-typescript
