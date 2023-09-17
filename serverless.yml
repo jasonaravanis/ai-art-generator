@@ -14,8 +14,8 @@ provider:
 
 
 functions:
-  getImage:
-    handler: src/index.getImage
+  generateArt:
+    handler: src/index.generateArt
     events:
       - httpApi:
           path: /
