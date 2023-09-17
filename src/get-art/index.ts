@@ -6,7 +6,6 @@ interface Art {
     image: string;
 }
 
-// const getPrompt = async (): Promise<OpenAI.Image | null> => {
 const getArt = async (): Promise<Art> => {
     const openAISecretKey = await getSecret('open-ai-secret-key');
 
@@ -29,10 +28,8 @@ const getArt = async (): Promise<Art> => {
         throw new Error("no image generator prompt found")
     }
 
-    // const response = await openai.images.generate({prompt, n: 1, size: '1024x1024', response_format: 'b64_json'})
     const response = await openai.images.generate({ prompt, n: 1, size: '1024x1024', response_format: 'url' })
 
-    // const image = response.data[0].b64_json
     const image = response.data[0].url
 
 
